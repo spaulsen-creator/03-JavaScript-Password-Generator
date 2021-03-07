@@ -23,22 +23,22 @@ function generatePassword() {
 
   var AllowedChars = []
 
-  var useLowerCase = window.prompt("Would you like to include lowercase letters? (Y/N".toUpperCase)
+  var useLowerCase = window.prompt("Would you like to include lowercase letters? (Y/N".toUpperCase())
   if (useLowerCase === 'Y') {
     allowedChars = allowedChars.concat(lowerCase)
   }
 
-  var useUpperCase = window.prompt("Would you like to include uppercase letters? (Y/N".toUpperCase)
+  var useUpperCase = window.prompt("Would you like to include uppercase letters? (Y/N".toUpperCase())
   if (useUpperCase === 'Y') {
     allowedChars = allowedChars.concat(upperCase)
   }
 
-  var useNumbers = window.prompt("Would you like to include numbers? (Y/N".toUpperCase)
+  var useNumbers = window.prompt("Would you like to include numbers? (Y/N".toUpperCase())
   if (useNumbers === 'Y') {
     allowedChars = allowedChars.concat(numbers)
   }
 
-  var useSpecialChar = window.prompt("Would you like to include special characters? (Y/N".toUpperCase)
+  var useSpecialChar = window.prompt("Would you like to include special characters? (Y/N".toUpperCase())
   if (useSpecialChar === 'Y') {
     allowedChars = allowedChars.concat(specialChar)
   }
@@ -48,13 +48,28 @@ function generatePassword() {
     return allowedChars;
   }
 
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+  var password = "";
 
-  //passwordText.value = password;
+  for(var i=0; i < userLength; i++) {
+    var index = Math.floor(Math.random() * allowedChars.length);
+    var character = allowedChars[index];
+    password = password.concat(character)
+  }
 
+  return password
 }
 
+function writePassword(){
+  var password = generatePassword();
+  if (password) {
+  var passwordText = document.querySelector("#password"); 
+
+  passwordText.value = password;
+}
+
+}  
+
+
+
 // Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
-console.log("hello")
+generateBtn.addEventListener("click", writePassword);
