@@ -12,33 +12,33 @@ var lowerCase = ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd'
 
 
 function generatePassword() {
-  // parseInt() function analyzes strings and gives a integer
-  // Determines the lebgth of the password to generate
-  // Prompts within generatePassword function
+  // parseInt() analyzes strings and gives a integer
+  // Determines the length of the password to generate
+  
   var userLength = parseInt(window.prompt("How many characters do you want your password to be? (8-128)" ));
   if ( isNaN(userLength) || userLength < 8 || userLength > 128) {
     window.alert("Choose a password length between 8 and 128")
     return
   }
 
-  var AllowedChars = []
+  var allowedChars = [];
 
-  var useLowerCase = window.prompt("Would you like to include lowercase letters? (Y/N".toUpperCase())
+  var useLowerCase = window.prompt("Would you like to include lowercase letters? Y/N").toUpperCase();
   if (useLowerCase === 'Y') {
     allowedChars = allowedChars.concat(lowerCase)
   }
 
-  var useUpperCase = window.prompt("Would you like to include uppercase letters? (Y/N".toUpperCase())
+  var useUpperCase = window.prompt("Would you like to include uppercase letters? Y/N").toUpperCase();
   if (useUpperCase === 'Y') {
     allowedChars = allowedChars.concat(upperCase)
   }
 
-  var useNumbers = window.prompt("Would you like to include numbers? (Y/N".toUpperCase())
+  var useNumbers = window.prompt("Would you like to include numbers? Y/N").toUpperCase();
   if (useNumbers === 'Y') {
     allowedChars = allowedChars.concat(numbers)
   }
 
-  var useSpecialChar = window.prompt("Would you like to include special characters? (Y/N".toUpperCase())
+  var useSpecialChar = window.prompt("Would you like to include special characters? Y/N").toUpperCase();
   if (useSpecialChar === 'Y') {
     allowedChars = allowedChars.concat(specialChar)
   }
