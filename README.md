@@ -10,6 +10,10 @@
 
 ## Link to deployed website.
 
+## Links
+https://spaulsen-creator.github.io/03-JavaScript-Password-Generator/
+
+https://github.com/spaulsen-creator/03-JavaScript-Password-Generator/settings
 
 ## Screenshots:
 ![image](Assets/images/Screenshot 2021-03-07 at 5.39.43 PM (1).jpg)
