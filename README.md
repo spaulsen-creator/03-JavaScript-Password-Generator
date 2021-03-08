@@ -13,7 +13,7 @@
 ## Links
 https://spaulsen-creator.github.io/03-JavaScript-Password-Generator/
 
-https://github.com/spaulsen-creator/03-JavaScript-Password-Generator/settings
+https://github.com/spaulsen-creator/03-JavaScript-Password-Generator/
 
 ## Screenshots:
 ![ScreenShot](Assets/images/Screenshot 2021-03-07 at 5.39.43 PM (1).jpg)
